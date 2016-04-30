@@ -6,8 +6,6 @@ ENV TERM xterm
 
 # 设置时区
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-# 设置本地字符集
-RUN localectl set-locale LANG=zh_CN.UTF-8
 # 更新
 RUN yum -y update 
 
