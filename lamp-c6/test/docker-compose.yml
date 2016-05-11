@@ -1,0 +1,11 @@
+lamp:
+    image: 'lamp-c6'
+    restart: always
+    hostname: '192.168.99.100'
+    ports:
+        - '80:80'
+        - '1022:22'
+        - '3306:3306'
+    volumes:
+        - './app:/app'
+
