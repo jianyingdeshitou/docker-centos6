@@ -9,3 +9,4 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 更新
 RUN yum -y update 
 
+RUN mkdir /run
