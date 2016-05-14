@@ -1,4 +1,5 @@
 #!/bin/bash
+service sshd start
 service mysqld start
 service httpd start
-/usr/sbin/sshd -D
+tail -f /var/log/lastlog
