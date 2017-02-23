@@ -1,0 +1,17 @@
+web:
+    image: 'php-httpd-c6'
+#    restart: always
+    command: /cmd/start.sh
+    ports:
+        - '10080:80'
+    volumes:
+        - './app:/app'
+        - './cmd:/cmd'
+    links:
+        - 'javabridge'
+
+javabridge:
+    image: 'javabridge-openjdk1.6-c6'
+    command: java -jar /etc/alternatives/jre_1.6.0/lib/ext/JavaBridge.jar SERVLET:8080
+    expose:
+        - '8080'
