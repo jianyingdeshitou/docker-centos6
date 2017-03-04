@@ -1,0 +1,9 @@
+lamp:
+    image: 'phpmyadmin-c6'
+#    restart: always
+    command: /cmd/start.sh
+    ports:
+        - '8000:80'
+    volumes:
+        - './cmd:/cmd'
+
