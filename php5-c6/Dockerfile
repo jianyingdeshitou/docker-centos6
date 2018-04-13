@@ -1,8 +1,9 @@
-FROM httpd-c6
+FROM centos6
 
 MAINTAINER 坚硬的石头 <do_nb@outlook.com>
 
-RUN rpm --rebuilddb && yum install -y  php php-mysql php-cli php-gd php-mbstring php-pdo php-xml
+#RUN rpm --rebuilddb && yum install -y  php php-mysql php-cli php-gd php-mbstring php-pdo php-xml
+RUN rpm --rebuilddb && yum install -y  php php-*
 
 COPY files/php.ini /etc/php.ini
 
