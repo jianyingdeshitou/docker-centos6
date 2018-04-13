@@ -2,7 +2,7 @@ FROM centos6
 
 MAINTAINER 坚硬的石头 do_nb@outlook.com 
 
-RUN yum install -y httpd 
+RUN rpm --rebuilddb && yum install -y httpd 
 
 RUN rm /etc/httpd/conf.d/welcome.conf
 COPY files/httpd.conf /etc/httpd/conf/httpd.conf
